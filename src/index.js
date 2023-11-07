@@ -37,6 +37,9 @@ function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
 
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
