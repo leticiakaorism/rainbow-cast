@@ -6,6 +6,12 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img
+              class="weather-app-icon"
+              src=${response.data.condition.icon_url}
+              alt="weather-icon"
+            />`;
 
   let date = new Date(response.data.time * 1000);
 
